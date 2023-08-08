@@ -24,7 +24,7 @@ async function fetchSeriesData(seriesId) {
 }
 
 // Example usage - Call the fetchSeriesData function with the seriesId you want to fetch
-const seriesIdToFetch = 'seriesId'; // Replace with the actual series ID
+const seriesIdToFetch = 'kay'; // Replace with the actual series ID
 fetchSeriesData(seriesIdToFetch);
 
 // Replace this config with your actual Firebase configuration
