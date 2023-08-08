@@ -23,9 +23,25 @@ async function fetchSeriesData(seriesId) {
   }
 }
 
-// Example usage - Call the fetchSeriesData function with the seriesId you want to fetch
-const seriesIdToFetch = 'kay'; // Replace with the actual series ID
-fetchSeriesData(seriesIdToFetch);
+// Function to fetch series information by seriesId
+async function fetchSeriesData(seriesId) {
+  const options = {
+    method: 'GET',
+    url: `https://moviesdatabase.p.rapidapi.com/titles/series/${seriesId}`,
+    headers: {
+      'X-RapidAPI-Key': '95110a8efdmsh4743eff3020f603p18aac5jsne04b1aa89d5e',
+      'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+    }
+  };
+
+  try {
+    const response = await axios.request(options);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
 
 // Replace this config with your actual Firebase configuration
 const firebaseConfig = {
