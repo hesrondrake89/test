@@ -90,3 +90,25 @@ async function saveReview(userId, reviewTitle, rating, reviewText) {
     console.error(error);
   }
 }
+
+// Add event listeners for login and logout buttons
+document.addEventListener("DOMContentLoaded", () => {
+  const loginButton = document.querySelector(".btn.login");
+  const logoutButton = document.querySelector(".btn.logout");
+
+  // Add event listener for login button
+  if (loginButton) {
+    loginButton.addEventListener("click", () => {
+      const email = "hesronatee@gmail.com"; // Replace with actual user email
+      const password = "sandra14";   // Replace with actual user password
+      login(email, password);
+    });
+  }
+
+  // Add event listener for logout button
+  if (logoutButton) {
+    logoutButton.addEventListener("click", () => {
+      logout();
+    });
+  }
+});
